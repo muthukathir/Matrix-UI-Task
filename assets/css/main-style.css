@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500&display=swap');
+
+html { scroll-behavior: smooth; } 
+body { font-family:'Varta', sans-serif; margin: 0;} 
+h1,h2,h3,h4,h5,h6 { font-family:'Varta', sans-serif; transition: all 0.5s ease 0s; } 
+a { color: #3baf49; transition: all 0.5s ease 0s; outline: none;  text-decoration: none;} 
+a:hover { color: #333; text-decoration: none; transition: all 0.5s ease 0s; } 
+p{ font-family: 'Varta', sans-serif;}
+span{  transition: all 0.5s ease 0s; }
+.main-wrapper { position: relative;}
+
+/* Maximum width for main section */
+.max-cntr { max-width: 1152px; margin: 0 auto; padding: 0 0px;} 
+
+/* latest Products */
+/* .prodt-slct{ background: url(../images/bg-cover.png) center bottom no-repeat; background-size: cover; margin:0px 0px; width: 100%; height: 752px;} */
+.prodt-slct::after{ position: absolute; content: ''; background: url(../images/bg-cover.png) center no-repeat; background-size: cover; width: 100%;
+  height: 100vh; top: 50%; bottom: 0; right: 0; left: 0;  z-index: -1;}
+.prodt-prt{ width: 100%; padding: 30px 0px 30px; float: left;}
+.prodt-prt .prodt-cnt-tit{ text-align: center; width: 100%; margin: 0px 0px 90px;}
+.prodt-prt .prodt-cnt-tit h2{ font-size: 18px; font-weight: 300; margin:0 0 30px 0; color: #333; text-align: left; text-transform: uppercase;}
+.prodt-prt .prodt-cnt-tit i{ display: block; font-size: 16px; margin:0; color: #333; text-align: left; width: 60%; font-weight: 400;}
+
+.prodt-cnt{ width: 90%; margin: 0 auto; padding: 0px;}
+.prodt-cnt-sldr { width:100%;}
+.prodt-cnt-sldr .cnt-box{ width: 33.33%; position: relative; z-index: 0; transition: all ease 0.4s; float: left;}
+.prodt-cnt-sldr .cnt-box a{ width: 100%; position: relative; background-color:#fff; transition:all ease 0.4s; overflow: hidden; border-radius: 30px; padding: 0px 0px; transition: all 0.5s ease 0s; height: 100%;}
+.prodt-cnt-sldr .cnt-box a .prodt-img{ position:relative; min-height: 180px; overflow: hidden;  padding: 0px 10px;}
+.prodt-cnt-sldr .cnt-box:hover a .prodt-img{ box-shadow: none; transition:all ease 0.4s;}
+.prodt-cnt-sldr .cnt-box a .prodt-img img{ width: 100%; max-height: 180px; object-fit:contain; transform: scale(1); -webkit-transform: scale(1); -webkit-transition: all 1s ease-out; transition: all 1s ease-out;}
+.prodt-cnt-sldr .cnt-box a .prodt-img:hover img{ transform: scale(1.05); -webkit-transform: scale(1.05); -webkit-transition: all 1s ease-out; transition: all 1s ease-out;}
+
+.prodt-cnt-sldr .cnt-box a .prodt-ftcnt h2{  margin-bottom: 5px; color: #333; font-weight: bold; text-transform: uppercase;line-height: 15px; font-size: 13px; transition:all ease 0.4s; text-align: center;}
+.prodt-cnt-sldr .cnt-box a .prodt-ftcnt h3{ margin: 0; color: #555; font-weight: 400; font-size: 13px; line-height: 15px;text-transform: capitalize; transition:all ease 0.4s;  text-align: center;}
+.prodt-cnt-sldr .cnt-box a .prodt-ftcnt span{ width: 100%; margin: 0; color: #333; font-weight: bold; font-size: 15px; transition:all ease 0.4s;
+text-align: center; display: block;}
+.prodt-ftcnt {padding: 0 55px;}
+
+.prodt-cnt {position: relative;}
+.prodt-cnt .prev{ position: absolute; left: -70px; top: 60px; bottom: 0;background: #eee; color: #333; border: none; padding: 20px 0px;
+font-size: 20px; cursor: pointer; border: 2px solid #fff;	margin: 10px 0px 0px 10px; width: 30px; height: 30px; border-radius: 25px; text-align: center;}
+.prodt-cnt .next{ position: absolute; right: -70px; top: 60px; bottom: 0; background: #eee; color: #333; border: none; padding: 20px 0px;
+font-size: 20px; cursor: pointer; border: 2px solid #fff;	margin: 10px 0px 0px 10px; width: 30px; height: 30px; border-radius: 25px; text-align: center;}
+
+.boxzoom { transform: scale(1.25); transition: all 0.5s ease 0s; position: relative;}
+.boxzoom::after{ position: absolute; content: ''; background: url(../images/wheel-bg.jpg) center no-repeat; background-size: cover; width: 280px;
+  height: 350px; top: 0; right: 0; left: 0;  z-index: -1; margin: 0 auto; border: 1px solid #ddd;}
+.boxzoom a .prodt-img {margin-top: 20px; }
