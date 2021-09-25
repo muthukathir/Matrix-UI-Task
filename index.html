@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">  
+    <title>test</title>   
+    <link href="assets/css/main-style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="one-skin">
+    <div class="main-wrapper">      
+        <div class="content-wrapper">          
+            <section class="prodt-slct">
+                <div class="max-cntr">
+                    <div class="prodt-prt">
+                        <div class="prodt-cnt-tit">
+                            <h2>wheels</h2>
+                            <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aperiam necessitatibus magni nihil 
+                                provident facere ullam error repellendus temporibus minus nostrum, eaque sed optio deleniti</i>
+                        </div>
+                        <div class="prodt-cnt slidercontainer">
+                            
+                            <div class="prodt-cnt-sldr showSlide fade">                                                      
+                                <div class="cnt-box" id="zoomid1" onclick="check(this);">
+                                    <a href="#">
+                                        <div class="prodt-img">
+                                            <img src="assets/images/wgu.png" class="img-fluid" alt="product">
+                                        </div>
+                                        <div class="prodt-ftcnt">
+                                            <h2>17-inch cast aluminum wheel, fully painted sliver litho</h2>
+                                            <h3>Standard on Touring FWD</h3>
+                                            <span>(WGU)</span>
+                                        </div>
+                                    </a>                                   
+                                </div> 
+                                <div class="cnt-box"  id="zoomid2" onclick="check(this);">
+                                    <a href="#">
+                                        <div class="prodt-img">
+                                            <img src="assets/images/wjr.png" class="img-fluid" alt="product">
+                                        </div>
+                                        <div class="prodt-ftcnt">
+                                            <h2>17-inch cast aluminum diamond-Cut wheel with baltic gray pockets</h2>
+                                            <h3>Standard on Touring LFWD / Hybrid and Touring Hybrid</h3>
+                                            <span>(WJR)</span>
+                                        </div>
+                                    </a>                                   
+                                </div> 
+                                <div class="cnt-box"  id="zoomid3" onclick="check(this);">
+                                    <a href="#">
+                                        <div class="prodt-img">
+                                            <img src="assets/images/wp6.png" class="img-fluid" alt="product">
+                                        </div>
+                                        <div class="prodt-ftcnt">
+                                            <h2>18-inch cast aluminum wheel, with foreshardow finish</h2>
+                                            <h3>Included with S Appearance Package on Touring Hybrid, Touring L Hybrid and Limited Hybrid</h3>
+                                            <span>(WP6)</span>
+                                        </div>
+                                    </a>                                   
+                                </div>                              
+                      
+                            </div>
+                            <div class="prodt-cnt-sldr showSlide fade">                                                      
+                                <div class="cnt-box"  id="zoomid4" onclick="check(this);">
+                                    <a href="#">
+                                        <div class="prodt-img">
+                                            <img src="assets/images/wpf.png" class="img-fluid" alt="product">
+                                        </div>
+                                        <div class="prodt-ftcnt">
+                                            <h2>17-inch cast aluminum wheel, fully painted sliver litho</h2>
+                                            <h3>Standard on Touring FWD</h3>
+                                            <span>(WGU)</span>
+                                        </div>
+                                    </a>                                   
+                                </div> 
+                                <div class="cnt-box"  id="zoomid5" onclick="check(this);">
+                                    <a href="#">
+                                        <div class="prodt-img">
+                                            <img src="assets/images/wp6.png" class="img-fluid" alt="product">
+                                        </div>
+                                        <div class="prodt-ftcnt">
+                                            <h2>18-inch cast aluminum wheel, with foreshardow finish</h2>
+                                            <h3>Included with S Appearance Package on Touring Hybrid, Touring L Hybrid and Limited Hybrid</h3>
+                                            <span>(WP6)</span>
+                                        </div>
+                                    </a>                                   
+                                </div> 
+                                <div class="cnt-box"  id="zoomid6" onclick="check(this);">
+                                    <a href="#">
+                                        <div class="prodt-img">
+                                            <img src="assets/images/wjr.png" class="img-fluid" alt="product">
+                                        </div>
+                                        <div class="prodt-ftcnt">
+                                            <h2>17-inch cast aluminum diamond-Cut wheel with baltic gray pockets</h2>
+                                            <h3>Standard on Touring LFWD / Hybrid and Touring Hybrid</h3>
+                                            <span>(WJR)</span>
+                                        </div>
+                                    </a>                                   
+                                </div>                              
+                      
+                            </div>
+                            
+                            <a class="prev" style="display: none;" onclick="nextSlide(-1)">&#10094;</a>  
+                            <a class="next" onclick="nextSlide(1)">&#10095;</a> 
+                        </div>                        
+                    </div>
+                </div>
+            </section> 
+        </div>      
+    </div>
+
+    <script>
+      function check(temp) { 
+       
+         if(temp.className.includes("boxzoom")!= true){    
+             
+             const array1 = ['zoomid1', 'zoomid2', 'zoomid3','zoomid4', 'zoomid5', 'zoomid6'];          
+             array1.forEach((element) => { 
+                v = document.getElementById(element);
+                v.className="cnt-box";             
+            });
+            temp.className += " boxzoom";
+         }  
+
+     }
+    window.addEventListener('click', function(e){   
+    const array1 = ['zoomid1', 'zoomid2', 'zoomid3','zoomid4', 'zoomid5', 'zoomid6'];
+    array1.forEach((element) => { 
+      if (document.getElementById(element).contains(e.target)){    
+       } else{        
+            var v = document.getElementById(element);
+            v.className="cnt-box";
+        }
+    });
+
+    });
+    </script>
+
+
+    <script>
+         var slide_index = 1;  
+        displaySlides(slide_index);  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+            if(n==-1){
+               document.getElementsByClassName("next")[0].style.display="block"
+               document.getElementsByClassName("prev")[0].style.display="none"
+            }
+            else{    
+                document.getElementsByClassName("next")[0].style.display="none"
+                document.getElementsByClassName("prev")[0].style.display="block"
+            }
+
+        }   
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block"; 
+
+
+            //Get all the imagge tag objects
+            
+            
+        }  
+    </script>
+  
+</body>
+
+</html>
